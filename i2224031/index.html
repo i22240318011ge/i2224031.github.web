@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i2224031 ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="stole.css">
+</head>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Top Section -->
+    
+    <div class="top" style="height: 700px; background-color: #b9fff8;">
+      <!-- Top Content: Image -->
+      <h1>
+        ポートフォリオ（課題用）</h1>
+      <ul class="slider" style="height: 700px;">
+        <li class="slider-item slider-item01"></li>
+        <li class="slider-item slider-item02"></li>
+        <li class="slider-item slider-item03"></li>
+        <li class="slider-item slider-item04"></li>
+        <li class="slider-item slider-item05"></li>
+        <li class="slider-item slider-item06"></li>
+        </ul>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle" style="height: 350px; background-color: #fdffed; overflow: auto;">
+      <!-- Middle Content: Horizontal Scroll and Popups -->
+      <h2>制作物</h2>
+      <div class="scroll-container" id="scroll-container">
+        <div class="item" onclick="openPopup('01.png', 'この作品は大学に入学してから初めての演習で制作したもの「ゴミ削減」をテーマにした作品', '01/was.mp4')"> <!-- Clicking on this image will open a popup with video and description -->
+          <img src="01/01.png" alt="１作目">
+        </div>
+        <div class="item" onclick="openPopup('im2.jpg', 'CGを初めて触れて制作した作品。まだまだだなと感じさせる作品', '02/SL.mp4')"> <!-- Clicking on this image will open a popup with video and description -->
+          <img src="02/im2.jpg" alt="2作目">
+        </div>
+        <div class="item" onclick="openPopup('03/hana.jpeg', 'サイト作りで初めて制作した作品ブログのような形の構成にした。リンクはこちらから', '', 'https://int.t-kougei.ac.jp/web1b_a/last/i2224031.5/')"> <!-- Clicking on this image will open a popup with image and link -->
+          <img src="03/hana.jpeg" alt="3作目">
+        </div>
+        <div class="item" onclick="openPopup('04/IMG_1120.jpg', '針金やビーズを使用して制作した作品で人や亀をうまく表現できていると自負している')"> <!-- Clicking on this image will open a popup with image and description -->
+          <img src="04/IMG_1120.jpg" alt="4作目">
+        </div>
+        <div class="item" onclick="openPopup('05.jpeg', 'Untyで制作した作品、時間が経てば理解ができる作品にしようと考えていた', '05/05.MOV')"> <!-- Clicking on this image will open a popup with video and description -->
+          <img src="05/05.jpeg" alt="5作目">
+        </div>
+        <div class="item" onclick="openPopup('06/06.jpg', '海沿いのホテルの会員証をイメージして制作した作品、バーコードをクリックすると逆向きになるのがもう少し分かりやすくすればいいのが反省点', '', 'https://www.figma.com/proto/TFDgroPXaqv5pa1SaXDryE/vol.08-suzuki-genta?node-id=0-3&starting-point-node-id=0%3A3&mode=design&t=XM2wKEmHeRhZTD5o-1')"> <!-- Clicking on this image will open a popup with image and link -->
+          <img src="06/06.jpg" alt="6作目">
+        </div>
+        <!-- Add more items here -->
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom" style="height: 400px; background-color: #ffcffb;">
+      <!-- Bottom Content: Image -->
+      <img src="bo/unn.png" alt="Self Introduction Image" onclick="openPopup('bo/unn.png', ' プロフィール  i2224031 鈴木元太    WEB演習での課題制作用のポートフィリオ')">
+    </div>
+  </div>
+
+  <!-- Popup Window -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div id="popup-media"></div>
+      <div id="popup-description"></div>
+      <div id="popup-link"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="js.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="jav.js"></script>
+
+</body>
+</html>
+
